@@ -36,11 +36,11 @@ header a {
     color: inherit;
 }
 
-h1 {
+h1, h2, h3 {
     font-family: 'Oswald', Verdana, Geneva, Tahoma, sans-serif;
     text-transform:lowercase;
     letter-spacing: 2px;
-    color: #6b0404;
+    color: rgb(107, 4, 4);
 }
 
 #menu {
@@ -87,12 +87,28 @@ main {
    
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
-    margin-top: 60%;
+    margin-top: 60px;
 }
 #hero {
 height: 600px;
 width: 100%;
 background: url("../images/hero-image.webp") no-repeat center center/cover;
+position:relative;
+}
+#cover-text {
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgba(107, 4, 4, .9);
+    font-size: 130%;
+    position: absolute;
+    bottom: 200px;
+    width: 90%;
+    min-height: 200px;
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+#cover-text > h2, #cover-text > h3 {
+    color: #ffffff;
 }
 /* Footer */
 #social-networks {
@@ -135,7 +151,13 @@ background: url("../images/hero-image.webp") no-repeat center center/cover;
       /* Main content */
       main {
         /* Push main content down to accommodate larger header */
-        margin-top: 79px;
+        margin-top: 100px;
+    }
+     /* Hero image */
+     #cover-text {
+        width: 600px;
+        right: 30%;
+        
     }
 }
 /* Large devices (laptops and desktops, 992px and up) */
